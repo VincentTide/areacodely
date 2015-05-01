@@ -1,0 +1,47 @@
+{% from "macros.html" import render_field_bootstrap %}
+
+{% extends "base.html" %}
+
+{% block title %}
+Areacodely
+{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Find location of a telephone number using the area code and prefix.">
+{% endblock %}
+
+
+{% block content %}
+
+    <div id="middle">
+        <div class="container">
+            <div class="flash_messages">
+            {% for message in get_flashed_messages() %}
+            <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+            {% endfor %}
+            </div>
+
+
+            <div class="center_box">
+                <h1>Areacodely</h1>
+                <p>Find the location of a phone number using the area code and prefix.</p>
+            </div>
+
+
+            <div id="name_form">
+                <form method="POST">
+                    {{ form.hidden_tag() }}
+                    <input type="text" name="area_code" id="area_code" placeholder="Area Code" value>
+                    <br>
+                    <input type="text" name="central_office_code" id="central_office_code" placeholder="Prefix" value>
+                    <button type="submit">Start</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

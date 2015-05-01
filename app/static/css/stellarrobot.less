@@ -1,0 +1,235 @@
+// Raw Colors
+@white: white;
+@black: black;
+@dark1: #A4A4A4;
+@dark2: #424242;
+@dark3: #2E2E2E;
+@dark4: #151515;
+@green1: #2ecc71;
+@green2: #27ae60;
+@yellow1: #f1c40f;
+@yellow2: #f39c12;
+@blue: #0091ff;
+@yellow: #FFF3A5;
+@grey1: #ecf0f1;
+@grey2: #bdc3c7;
+@grey3: #95a5a6;
+@grey4: #7f8c8d;
+@cream: #F3F1EB;
+@orange1: #e67e22;
+@orange2: #d35400;
+@purple1: #9b59b6;
+@purple2: #8e44ad;
+@navy1: #34495e;
+@navy2: #2c3e50;
+@teal1: #1abc9c;
+@teal2: #16a085;
+@red1: #e74c3c;
+@red2: #c0392b;
+@blue1: #3498db;
+@blue2: #2980b9;
+
+// Site Colors
+@bg-gradient1: #121212;
+@bg-gradient2: #1F1F1F;
+@footer-bg-color: @green2;
+@footer-font-color: @white;
+@footer-link-color: @white;
+@link-color: @green2;
+@link-hover-color: @green1;
+@article-title-color: @green2;
+@official-font-color: @blue;
+
+
+body {
+    color: ghostwhite;
+    font-family: 'Open Sans', sans-serif;
+    min-width: 500px; /* suppose you want minimun width of 1000px */
+    width: auto !important;  /* Firefox will set width as auto */
+    width: 500px;
+}
+
+#top {
+    .container {
+        background-color: @orange1;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    background-color: @orange1;
+    color: @white;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    a {
+        color: @white;
+        text-decoration: none;
+    }
+    .site_title {
+        font-weight: 300;
+        font-size: 30px;
+        margin-top: 14px;
+        margin-bottom: 14px;
+    }
+
+
+}
+
+#middle {
+    .container {
+        background-color: @green2;
+    }
+    background-color: @green2;
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+#bottom {
+    .container {
+        background-color: @navy2;
+    }
+    background-color: @navy2;
+    padding-top: 40px;
+    padding-bottom: 38px;
+    .footer {
+        a {
+            color: ghostwhite;
+        }
+    }
+}
+
+
+
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+input[type=text] {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    padding:5px;
+    border:2px solid @orange1;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    width: 90%;
+}
+input[type=text]:focus {
+    box-shadow: 0 0 5px @orange2;
+}
+button[type=submit] {
+    color: @white;
+    margin-top: 20px;
+    padding: 7px 60px;
+    background: @orange1;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 2px solid ghostwhite;
+}
+#name_form {
+    color: @purple1;
+    font-size: 32px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.center_box {
+    text-align: center;
+    h1 {
+        font-family: 'Dosis', sans-serif;
+        font-size: 90px;
+        font-weight: 600;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    p{
+        font-size: 28px;
+        font-weight: 300;
+    }
+}
+
+.account_summary {
+    border: 1px solid whitesmoke;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    max-width: 600px;
+    h2 {
+        text-align: center;
+        font-size: 20px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+}
+
+.table-summary {
+    margin-bottom: 0px;
+}
+.table-summary tbody tr th, .table-summary tbody tr td {
+     border-top: none;
+ }
+
+.instructions {
+    text-align: center;
+    font-size: 26px;
+    padding-top: 40px;
+    h2 {
+        font-size: 40px;
+    }
+    p {
+        margin-bottom: 0;
+        font-size: 26px;
+    }
+    .smaller_text {
+        font-size: 17px;
+    }
+    a {
+        color: @blue2;
+        text-decoration: none;
+    }
+}
+
+.destination_address {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+    span {
+        color: @white;
+        font-size: 18px;
+        font-weight: 300;
+        background-color: @purple1;
+        padding: 10px 10px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+        border: 2px solid ghostwhite;
+    }
+}
+
+.transactions{
+    h2 {
+        text-align: center;
+    }
+    .received_payments {
+
+    }
+    .sent_payments {
+        margin-top: 40px;
+    }
+}
+
+.article_well {
+    font-size: 20px;
+    background-color: @green2;
+    padding-top: 50px;
+    padding-bottom: 400px;
+}
+
+
