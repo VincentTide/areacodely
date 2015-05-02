@@ -33,20 +33,19 @@ Areacodely
             <div id="name_form">
                 <form action="{{ url_for('search') }}" method="POST">
                     {{ form.hidden_tag() }}
-                    <input type="tel" name="number" id="number" placeholder="(123) 456 -" maxlength="6" value>
+                    <input type="tel" name="number" id="number" placeholder=" (123) 456 - XXXX" maxlength="6" value>
                     <br>
                     <button type="submit">Start</button>
                 </form>
             </div>
 
-            <div>
+            <div class="location_box">
                 <p>Phone: ({{ location.area_code }}) {{ location.central_office_code }} - XXXX</p>
-                <p>{{ location.full_name }}</p>
-                <p>{{ location.state }}</p>
-                <p>{{ location.metro }}</p>
-                <p>{{ location.assigned_to }}</p>
-                <p>{{ location.date_assigned }}</p>
-                <p>{{ location.date_effective }}</p>
+                <p>Location: {{ location.full_name }} {{ location.state }}</p>
+                <p>Metro Area: {{ location.metro }}</p>
+                <p>Carrier or Company: {{ location.assigned_to }}</p>
+                <p>Date Assigned: {{ moment(location.date_assigned).format('LL') }}</p>
+                <p>Date Effective: {{ moment(location.date_effective).format('LL') }}</p>
             </div>
 
 

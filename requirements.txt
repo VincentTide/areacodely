@@ -10,6 +10,8 @@ Werkzeug==0.10.4
 argparse==1.2.1
 ipython==3.1.0
 itsdangerous==0.24
+jellyfish==0.2.1
 psycopg2==2.6
-wsgiref==0.1.2
 python-dateutil==1.5
+us==0.9.0
+wsgiref==0.1.2
