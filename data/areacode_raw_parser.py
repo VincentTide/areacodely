@@ -5,7 +5,7 @@ import sys
 
 
 
-def parser_ratecentername():
+def parse_ratecentername():
     input = open("RateCenterName_tabbed.csv")
     firstline = input.readline()
 
@@ -71,20 +71,8 @@ def parse_areacode(full_name):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
-    full_name = parser_ratecentername()
+    full_name = parse_ratecentername()
     parse_areacode(full_name)
 
 

@@ -32,11 +32,10 @@ Areacodely
 
 
             <div id="name_form">
-                <form method="POST">
+                <form action="{{ url_for('search') }}" method="POST">
                     {{ form.hidden_tag() }}
-                    <input type="text" name="area_code" id="area_code" placeholder="Area Code" value>
+                    <input type="tel" name="number" id="number" placeholder="(123) 456 -" maxlength="6" value>
                     <br>
-                    <input type="text" name="central_office_code" id="central_office_code" placeholder="Prefix" value>
                     <button type="submit">Start</button>
                 </form>
             </div>

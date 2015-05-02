@@ -1,0 +1,58 @@
+{% from "macros.html" import render_field_bootstrap %}
+
+{% extends "base.html" %}
+
+{% block title %}
+Areacodely
+{% endblock %}
+
+{% block meta %}
+<meta name="description" content="Find location of a telephone number using the area code and prefix.">
+{% endblock %}
+
+
+{% block content %}
+
+    <div id="middle">
+        <div class="container">
+            <div class="flash_messages">
+            {% for message in get_flashed_messages() %}
+            <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                {{ message }}
+            </div>
+            {% endfor %}
+            </div>
+
+
+            <div class="center_box">
+                <h1>Areacodely</h1>
+            </div>
+
+
+            <div id="name_form">
+                <form action="{{ url_for('search') }}" method="POST">
+                    {{ form.hidden_tag() }}
+                    <input type="tel" name="number" id="number" placeholder="(123) 456 -" maxlength="6" value>
+                    <br>
+                    <button type="submit">Start</button>
+                </form>
+            </div>
+
+            <div>
+                <p>Phone: ({{ location.area_code }}) {{ location.central_office_code }} - XXXX</p>
+                <p>{{ location.full_name }}</p>
+                <p>{{ location.state }}</p>
+                <p>{{ location.metro }}</p>
+                <p>{{ location.assigned_to }}</p>
+                <p>{{ location.date_assigned }}</p>
+                <p>{{ location.date_effective }}</p>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+{% endblock %}
