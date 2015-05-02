@@ -42,10 +42,11 @@ Areacodely
             <div class="location_box">
                 <p>Phone: ({{ location.area_code }}) {{ location.central_office_code }} - XXXX</p>
                 <p>Location: {{ location.full_name }} {{ location.state }}</p>
+                <p><a href="{{ google_maps }}" target="_blank">Google Maps</a></p>
                 <p>Metro Area: {{ location.metro }}</p>
                 <p>Carrier or Company: {{ location.assigned_to }}</p>
-                <p>Date Assigned: {{ moment(location.date_assigned).format('LL') }}</p>
-                <p>Date Effective: {{ moment(location.date_effective).format('LL') }}</p>
+                <p>Date Assigned: {{ location.date_assigned }}</p>
+                <p>Date Effective: {{ location.date_effective }}</p>
             </div>
 
 
