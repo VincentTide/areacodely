@@ -34,7 +34,7 @@ Areacodely
             <div id="name_form">
                 <form action="{{ url_for('search') }}" method="POST">
                     {{ form.hidden_tag() }}
-                    <input type="tel" name="number" id="number" placeholder=" (123) 456 - XXXX" maxlength="6" value>
+                    <input type="number" name="number" id="number" placeholder=" (123) 456 - XXXX" value>
                     <br>
                     <button type="submit">Find Location</button>
                 </form>
