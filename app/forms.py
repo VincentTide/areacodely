@@ -4,5 +4,5 @@ from wtforms.validators import DataRequired, Length, Email, Regexp, EqualTo
 
 
 class TelephoneForm(Form):
-    number = StringField('Number')
+    number = StringField('Number', [Length(min=6, max=6), DataRequired()])
     submit = SubmitField('Submit')

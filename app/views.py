@@ -75,10 +75,7 @@ def search_post():
                                    google_maps=google_maps,
                                    entry=entry)
     return render_template('search.html',
-                           location=None,
-                           form=form,
-                           google_maps=None,
-                           entry=None)
+                           form=form)
 
 
 
