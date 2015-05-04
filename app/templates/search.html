@@ -25,15 +25,10 @@ Areacodely
             </div>
 
 
-            <div class="center_box">
-                <h1>Areacodely</h1>
-            </div>
-
-
             <div id="name_form">
                 <form action="{{ url_for('search') }}" method="POST">
                     {{ form.hidden_tag() }}
-                    <input type="tel" name="number" id="number" placeholder="(123) 456" maxlength="6" size="8" value>
+                    <input type="tel" name="number" id="number" placeholder="(123) 456" maxlength="6" size="7" value>
                     <br>
                     <button type="submit">Find Location</button>
                 </form>
@@ -43,11 +38,11 @@ Areacodely
                 {% if location is defined %}
                     <p>Phone: ({{ location.area_code }}) {{ location.central_office_code }} - XXXX</p>
                     <p>Location: {{ location.full_name }} {{ location.state }}</p>
-                    <p><a href="{{ google_maps }}" target="_blank">Google Maps</a></p>
-                    <p>Metro Area: {{ location.metro }}</p>
-                    <p>Carrier or Company: {{ location.assigned_to }}</p>
-                    <p>Date Assigned: {{ location.date_assigned }}</p>
-                    <p>Date Effective: {{ location.date_effective }}</p>
+                    <p class="google_maps_link"><a href="{{ google_maps }}" target="_blank">Google Maps</a></p>
+                    <p class="smaller_paragraph">Metro Area: {{ location.metro }}</p>
+                    <p class="smaller_paragraph">Carrier or Company: {{ location.assigned_to }}</p>
+                    <p class="smaller_paragraph">Date Assigned: {{ location.date_assigned }}</p>
+                    <p class="smaller_paragraph">Date Effective: {{ location.date_effective }}</p>
                 {% elif entry is defined %}
                     <p>Sorry, we did not find any data for ({{ entry.area_code }}) {{ entry.central_office_code }} - XXXX</p>
                 {% else %}
