@@ -1,10 +1,6 @@
 import sys
 
 
-
-
-
-
 def parse_ratecentername():
     input = open("RateCenterName_tabbed.csv")
     firstline = input.readline()
@@ -31,12 +27,7 @@ def parse_ratecentername():
                 'msa_name': fcc_msa_name }
                                              }
 
-
-    # print full_name["SPRINGVL"]
-
     return full_name
-
-
 
 
 def parse_areacode(full_name):
@@ -65,27 +56,6 @@ def parse_areacode(full_name):
         print area_code, central_office_code, rate_center, name['fullname'], name['msa_name']
 
 
-
-
-
-
-
-
 if __name__ == '__main__':
     full_name = parse_ratecentername()
     parse_areacode(full_name)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
